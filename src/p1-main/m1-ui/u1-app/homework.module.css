@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+.homeworkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+
+.homeworkTitle {
+    text-transform: uppercase;
+    font-weight: bolder;
+    display: flex;
+    justify-content: right;
+    color: #000;
+    padding-bottom: 20px;
+}
