@@ -1,3 +1,24 @@
-.someClass {
+.affairContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.affairName {
+    width: 220px;
+    text-align: center;
+}
+.affairPriority {
+    width: 80px;
+}
+
+.btnContainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 100px;
+    margin: 0 2px;
 }
