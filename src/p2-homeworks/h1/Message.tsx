@@ -12,6 +12,7 @@ function Message(props: MessageProsType) {
     return (
         <div className={mesStyle.message}>
             <div className={mesStyle.avatar}><img className={mesStyle.img} src={props.avatar} alt="avatar"/></div>
+            {/*<div className={mesStyle.avatar} ><div className={mesStyle.divAva} style={{backgroundImage: `url(${props.avatar})`}}></div></div>*/}
             <div className={mesStyle.message_content}>
                 <div className={mesStyle.message_body}>
                     <div className={mesStyle.user_name}>{props.name}</div>
