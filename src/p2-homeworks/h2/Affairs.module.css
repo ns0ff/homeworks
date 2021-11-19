@@ -2,16 +2,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: #000 solid 1px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    height: 30px;
 }
+
+/*.affairContainer:nth-of-type(odd) {*/
+/*    background-color: purple;*/
+/*}*/
+
+/*.affairContainer:nth-of-type(even) {*/
+/*    background-color: purple;*/
+/*}*/
 
 .affairName {
     width: 220px;
     text-align: start;
 }
-
-/*.affairName:nth-last-child(odd) {*/
-/*    background-color: red;*/
-/*}*/
 
 .affairPriority {
     width: 60px;
@@ -22,8 +30,8 @@
 
 .closeBtn {
     background-color: #fff;
-    border-radius: 5px;
-    border: #000 solid 2px;
+    border-radius: 50%;
+    border: #000 solid 1px;
     margin-left: 0;
 }
 
