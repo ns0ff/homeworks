@@ -18,7 +18,7 @@ function Affair(props: AffairPropsType) {
             <div className={styles.affairContainer}>
                 <div className={styles.affairName}> {props.affair.name} </div>
                 <div className={styles.affairPriority}>{props.affair.priority}</div>
-                <button onClick={() => deleteCallback(props.affair._id)}>X</button>
+                <button onClick={() => deleteCallback(props.affair._id)} className={styles.closeBtn}>X</button>
             </div>
         </div>
     )

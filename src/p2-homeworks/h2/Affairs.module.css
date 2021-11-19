@@ -6,11 +6,38 @@
 
 .affairName {
     width: 220px;
-    text-align: center;
+    text-align: start;
 }
 
+/*.affairName:nth-last-child(odd) {*/
+/*    background-color: red;*/
+/*}*/
+
 .affairPriority {
-    width: 80px;
+    width: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.closeBtn {
+    background-color: #fff;
+    border-radius: 5px;
+    border: #000 solid 2px;
+    margin-left: 0;
+}
+
+.closeBtn:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.closeBtn:active {
+    color: red;
+    background-color: #333;
+    border-color: #333;
+    transform: scale(0.9);
 }
 
 .btnContainer{
@@ -20,6 +47,27 @@
 }
 
 .btn {
-    width: 100px;
+    width: 80px;
     margin: 0 2px;
+    text-decoration: none;
+    color: #000;
+    border: #000 solid 2px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.btn:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.btn:active {
+    color: red;
+    background-color: #333;
+    border-color: #333;
+    transform: scale(0.9);
 }
