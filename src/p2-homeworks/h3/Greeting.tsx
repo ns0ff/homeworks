@@ -1,26 +1,33 @@
-import React from 'react'
-import s from './Greeting.module.css'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
+import styles from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string // fixed any to string
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // fixed any to function
+    addUser: (name: string) => void // fixed any to function
+    error: string // fixed any to string
+    totalUsers: number // fixed any to number
+    keyPress: (e: KeyboardEvent<HTMLInputElement>) => void // added function
 }
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
+    {name, setNameCallback, addUser, error, totalUsers, keyPress} // деструктуризация пропсов
 ) => {
-    const inputClass = s.error // need to fix with (?:)
+    // const inputClass = s.error // need to fix with (?:) // wtf??
 
     return (
         <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+            <div className={styles.Container}>
+                <div className={styles.inputContainer}>
+                    <input value={name} onChange={setNameCallback} onKeyPress={keyPress} className={styles.input}/>
+                </div>
+
+                <button onClick={() => {addUser(name)}} className={styles.addBtn}>add</button>
+
+                <div><span className={styles.span}>{totalUsers}</span></div>
+            </div>
+            <div> {error ? <span className={styles.error}>{error}</span> : ''} </div>
         </div>
     )
 }

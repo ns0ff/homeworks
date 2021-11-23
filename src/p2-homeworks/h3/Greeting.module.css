@@ -1,7 +1,61 @@
-.someClass {
+* {
+    box-sizing: border-box;
+}
 
+.Container {
+    display: flex;
+    justify-content: center;
+}
+
+.inputContainer  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    font-size: 20px;
+    height: 50px;
+    margin-right: 0;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #000;
+    padding-left: 10px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.addBtn {
+    margin-left: 0;
+    width: 80px;
+    height: 50px;
+    background-color: #F9E0D9;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid black;
+    font-weight: 600;
+    background-color: #E6DBD0;
 }
 
 .error {
-    border: 1px solid red;
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

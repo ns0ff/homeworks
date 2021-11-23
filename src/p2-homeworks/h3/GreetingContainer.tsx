@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
+import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: Array<UserType> // fixed any to Array of UserType
+    addUserCallback: (name: string) => void // fixed any to string => void
 }
 
 // более простой и понятный для новичков
@@ -12,17 +13,35 @@ type GreetingContainerPropsType = {
 // более современный и удобный для про :)
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    const [name, setName] = useState<string>('') // fixed any to string
+    const [error, setError] = useState<string>('') // fixed any to string
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
-    }
-    const addUser = () => {
-        alert(`Hello  !`) // need to fix
+    const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // fixed any to ChangeElement
+        setName(e.currentTarget.value) // fixed from '' to event.currentTarget.value
+        setError('') // added
     }
 
-    const totalUsers = 0 // need to fix
+    // Func added:
+    function addUsrLogicFunc() {
+        alert(`Hello ${name}!`)
+        addUserCallback(name)
+        setError('')
+        setName('')
+    }
+
+    //Keypress func added:
+    const keyPress = (e:KeyboardEvent<HTMLInputElement>) => {  // !!!!! how write function ?????
+        if (e.currentTarget.value && e.key === 'Enter') addUsrLogicFunc()
+    }
+
+    const addUser = (name: string) => {
+        if(name.length){
+            addUsrLogicFunc()
+        } else { setError('Enter the name') }
+
+    }
+
+    const totalUsers = users.length // fixed 0 to users.length
 
     return (
         <Greeting
@@ -31,6 +50,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            keyPress = {keyPress}
         />
     )
 }
