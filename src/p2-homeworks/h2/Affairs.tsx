@@ -2,6 +2,7 @@ import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import s from './Affairs.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type AffairsPropsType = { // any fixed
     filteredAffairs: Array<AffairType>
@@ -11,10 +12,18 @@ type AffairsPropsType = { // any fixed
 
 function Affairs(props: AffairsPropsType) {
 
-    const setAll = () => {props.setFilter('all')}
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setAll = () => {
+        props.setFilter('all')
+    }
+    const setHigh = () => {
+        props.setFilter('high')
+    }
+    const setMiddle = () => {
+        props.setFilter('middle')
+    }
+    const setLow = () => {
+        props.setFilter('low')
+    }
 
     return (
         <div>
@@ -23,10 +32,10 @@ function Affairs(props: AffairsPropsType) {
             </div>
 
             <div className={s.btnContainer}>
-                <button onClick={setAll} className={s.btn}>All</button>
-                <button onClick={setHigh} className={s.btn}>High</button>
-                <button onClick={setMiddle} className={s.btn}>Middle</button>
-                <button onClick={setLow} className={s.btn}>Low</button>
+                <SuperButton onClick={setAll} className={s.btn}>All</SuperButton>
+                <SuperButton onClick={setHigh} className={s.btn}>High</SuperButton>
+                <SuperButton onClick={setMiddle} className={s.btn}>Middle</SuperButton>
+                <SuperButton onClick={setLow} className={s.btn}>Low</SuperButton>
             </div>
         </div>
     );

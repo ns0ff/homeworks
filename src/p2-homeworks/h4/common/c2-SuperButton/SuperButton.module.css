@@ -1,7 +1,32 @@
-.default {
-
+.button {
+    width: 80px;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #000;
+    border: #000 solid 2px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
-.red {
-    background: red;
+.button:hover {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+.button:active {
+    color: red;
+    background-color: #333;
+    border-color: #333;
+    transform: scale(0.9);
+}
+
+
+.redButton {
+    width: 70px;
+    height: 44px;
+    border-radius: 0;
 }

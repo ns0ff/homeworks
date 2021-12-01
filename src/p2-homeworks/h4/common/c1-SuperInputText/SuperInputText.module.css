@@ -1,12 +1,52 @@
-.superInput {
+.input {
+    width: 600px;
+    font-size: 20px;
+    height: 50px;
+    margin-right: 0;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
 
+.input:focus {
+    outline: none;
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    width: 600px;
+    font-size: 20px;
+    height: 50px;
+    margin-right: 0;
+    border-radius: 10px;
+    border: 1px solid red;
+    padding-left: 10px;
+    box-shadow: 0 0 11px rgba(255, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.errorInput:focus {
+    outline: none;
 }
 
 .error {
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bolder;
     color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.hw3 {
+    font-size: 20px;
+    height: 50px;
+    margin-right: 0;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #000;
+    padding-left: 10px;
 }

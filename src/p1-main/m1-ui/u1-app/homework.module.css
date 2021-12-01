@@ -6,15 +6,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
     padding: 20px 0;
-    border-bottom: 1px solid #000;
 }
 
 .homeworkTitle {
+    letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: bolder;
-    display: flex;
-    justify-content: right;
     color: #000;
     padding-bottom: 20px;
 }
