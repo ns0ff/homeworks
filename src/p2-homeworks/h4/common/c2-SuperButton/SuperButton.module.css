@@ -1,32 +1,37 @@
-.button {
-    width: 80px;
-    margin: 0 2px;
+.default {
+    outline: none;
     text-decoration: none;
-    color: #000;
-    border: #000 solid 2px;
-    font-size: 12px;
-    font-weight: 400;
-    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 16px;
+    margin: 5px;
+    position: relative;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .4);
     border-radius: 5px;
-    background-color: #fff;
+    background: #f0f;
+    text-transform: capitalize;
+    cursor: pointer;
 }
 
-.button:hover {
-    background-color: #333;
-    border-color: #333;
-    color: #fff;
+.default:active {
+    transform: scale(0.98);
 }
 
-.button:active {
-    color: red;
-    background-color: #333;
-    border-color: #333;
-    transform: scale(0.9);
+.default:hover {
+    box-shadow: 0 0 5px 2px #0ff;
 }
 
+.red {
+    background: red;
+}
 
-.redButton {
-    width: 70px;
-    height: 44px;
-    border-radius: 0;
+.default:disabled {
+    background: darkslategray;
+    color: #aaa;
+}
+
+.default:disabled:hover {
+    transform: none;
+    box-shadow: none;
 }
